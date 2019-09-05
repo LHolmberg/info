@@ -1,32 +1,34 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
-  *:focus {
-    outline: none; }
+h1 {
+  font-family: "Roboto";
+  font-style: oblique
+}
 
-html {
+html 
+{
   background: #232323;
   color: white;
-  font: normal 10px/1.42857 "Source Sans Pro", Helvetica, Arial, sans-serif; }
+  font: normal 10px/1.42857 "Source Sans Pro", Helvetica, Arial, sans-serif; 
+}
 
-body {
+body 
+{
   background: none;
   color: inherit;
-  font: inherit; }
+  font: inherit; 
+}
 
-a {
+a 
+{
   color: inherit;
   cursor: pointer;
-  text-decoration: none; }
-  a:hover {
-    opacity: 0.8; }
+  text-decoration: none; 
+}
 
-/* nav toggle */
+a:hover 
+{
+  opacity: 0.8; 
+}
+
 .nav-toggle {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -38,11 +40,16 @@ a {
   top: 2rem;
   width: 3.6rem;
   z-index: 2; }
-  .nav-toggle:hover {
-    opacity: 0.8; }
+  
+  .nav-toggle:hover 
+  {
+    opacity: 0.8; 
+  }
+
   .nav-toggle .nav-toggle-bar,
   .nav-toggle .nav-toggle-bar::after,
-  .nav-toggle .nav-toggle-bar::before {
+  .nav-toggle .nav-toggle-bar::before 
+  {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -56,29 +63,65 @@ a {
     background: white;
     content: '';
     height: 0.4rem;
-    width: 100%; }
-  .nav-toggle .nav-toggle-bar {
-    margin-top: 0; }
-  .nav-toggle .nav-toggle-bar::after {
-    margin-top: 0.8rem; }
-  .nav-toggle .nav-toggle-bar::before {
-    margin-top: -0.8rem; }
-  .nav-toggle.expanded .nav-toggle-bar {
-    background: transparent; }
-  .nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before {
+    width: 100%;
+  }
+
+  .nav-toggle .nav-toggle-bar 
+  {
+    margin-top: 0; 
+  }
+
+  .nav-toggle .nav-toggle-bar::after 
+  {
+    margin-top: 0.8rem; 
+  }
+
+  .nav-toggle .nav-toggle-bar::before 
+  {
+    margin-top: -0.8rem; 
+  }
+
+  .nav-toggle.expanded .nav-toggle-bar 
+  {
+    background: transparent; 
+  }
+
+  .nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before 
+  {
     background: white;
-    margin-top: 0; }
-  .nav-toggle.expanded .nav-toggle-bar::after {
+    margin-top: 0; 
+  }
+
+  .nav-toggle.expanded .nav-toggle-bar::after 
+  {
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-    transform: rotate(45deg); }
-  .nav-toggle.expanded .nav-toggle-bar::before {
+    transform: rotate(45deg); 
+  }
+
+  .nav-toggle.expanded .nav-toggle-bar::before
+  {
     -ms-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
+    transform: rotate(-45deg); 
+  }
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+* 
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; 
+}
+*:focus 
+{
+  outline: none; 
+}
 
-/* nav */
-.nav {
+.nav 
+{
   -webkit-transition: left 0.5s ease;
   -moz-transition: left 0.5s ease;
   -ms-transition: left 0.5s ease;
@@ -87,61 +130,67 @@ a {
   background: #101010;
   color: white;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.8rem;
   height: 100vh;
   left: -20rem;
-  padding: 6rem 2rem 2rem 2rem;
+  padding: 10rem 2rem 2rem 2rem;
   position: fixed;
-  top: 0;
   width: 20rem;
-  z-index: 1; }
-  .nav.expanded {
-    left: 0; }
-  .nav ul {
-    position: absolute;
-    top: 20%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    list-style: none;
-    margin: 0;
-    padding: 0; }
+  z-index: 1; 
+}
 
-    * {
-      box-sizing: border-box;
-    }
-    
-    body {
-      margin: 0;
-    }
-    
-    /* Style the header */
-    .header {
-      padding: 100px;
-      text-align: center;
-      background-image: url("dd.jpg");
-    }
-    
-    
-    /* Create three equal columns that floats next to each other */
-    .column {
-      float: left;
-      width: 33.33%;
-      padding: 15px;
-    }
-    
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    
-    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-    @media screen and (max-width:600px) {
-      .column {
-        width: 100%;
-      }
-    }
+.nav.expanded 
+{
+  left: 0; 
+}
+.nav ul 
+{
+  position: absolute;
+  top: 20%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+}
 
-/*# sourceMappingURL=nav.css.map */
+* 
+{
+  box-sizing: border-box;
+}
+  
+body 
+{
+  margin: 0;
+}
+    
+.header 
+{
+  padding: 1px;
+  text-align: center;
+  background:#101010;
+  font-size: 12px;
+}
+    
+.column 
+{
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+.row:after 
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width:600px) 
+{
+  .column 
+  {
+    width: 100%;
+  }
+}
