@@ -1,27 +1,24 @@
 <!doctype html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>test</title>
 		<link rel="stylesheet" href="nav.css">
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:light">
+		
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<div class="nav-toggle">
-			<div class="nav-toggle-bar"></div>
-		</div>
-		<nav class="nav">
-			<ul>
-				<li><a href="#">Webbens historia</a></li>
-				<li><a href="#">Webbens- samhällspåverkan</a></li>
-				<li><a href="#">GDPR</a></li>
-				<li><a href="#">LEK</a></li>
-			</ul>
-		</nav>
-		<div class="header">
-				<h1>Lukas-WEBWEU01</h1>
-		</div>
-		<script src="scripts/nav.js"></script>
+			<header class="header">
+					<a href="" class="logo">WEBWEU01</a>
+					<input class="menu-btn" type="checkbox" id="menu-btn" />
+					<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+					<ul class="menu">
+					  <li><a href="#work">Webbens historia</a></li>
+					  <li><a href="#about">GDPR</a></li>
+					  <li><a href="#careers">Webbens samhällspåverkan</a></li>
+					  <li><a href="#contact">LEK</a></li>
+					</ul>
+			</header>
+      	<canvas width = "800" height = "700" id = "my_Canvas"></canvas>
 	</body>
+	<script src="gl.js"></script>
 </html>
