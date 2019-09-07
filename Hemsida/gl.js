@@ -8,7 +8,7 @@
     -1,-1,-1, -1, 1,-1, -1, 1, 1, -1,-1, 1,
     1,-1,-1, 1, 1,-1, 1, 1, 1, 1,-1, 1,
     -1,-1,-1, -1,-1, 1, 1,-1, 1, 1,-1,-1,
-    -1, 1,-1, -1, 1, 1, 1, 1, 1, 1, 1,-1, 
+    -1, 1,-1, -1, 1, 1, 1, 1, 1, 1, 1,-1,
  ];
 
  var colors = [
@@ -17,13 +17,13 @@
     0,0,1, 0,0,1, 0,0,1, 0,0,1,
     1,0,0, 1,0,0, 1,0,0, 1,0,0,
     1,1,0, 1,1,0, 1,1,0, 1,1,0,
-    0,1,0, 0,1,0, 0,1,0, 0,1,0 
+    0,1,0, 0,1,0, 0,1,0, 0,1,0
  ];
 
  var indices = [
     0,1,2, 0,2,3, 4,5,6, 4,6,7,
     8,9,10, 8,10,11, 12,13,14, 12,14,15,
-    16,17,18, 16,18,19, 20,21,22, 20,22,23 
+    16,17,18, 16,18,19, 20,21,22, 20,22,23
  ];
 
 
@@ -92,7 +92,7 @@
        0.5/ang, 0 , 0, 0,
        0, 0.5*a/ang, 0, 0,
        0, 0, -(zMax+zMin)/(zMax-zMin), -1,
-       0, 0, (-2*zMax*zMin)/(zMax-zMin), 0 
+       0, 0, (-2*zMax*zMin)/(zMax-zMin), 0
     ];
  }
 
@@ -192,11 +192,11 @@
     rotateY(mo_matrix, THETA);
     rotateX(mo_matrix, PHI);
 
-    time_old = time; 
+    time_old = time;
     gl.enable(gl.DEPTH_TEST);
 
 
-    gl.clearColor(0.1372,0.07450,0.1372,1);
+    gl.clearColor(0.9568,0.9607,0.9647,1);
     gl.clearDepth(1.0);
     gl.viewport(0.0, 0.0, canvas.width, canvas.height);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
@@ -211,5 +211,3 @@
     window.requestAnimationFrame(animate);
  }
  animate(0);
-
- 
