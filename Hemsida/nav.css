@@ -8,87 +8,60 @@ a {
   color: #000000;
 }
 
-article{
-  column-count: 3;
-  column-gap: 40px;
-  column-rule-style: solid;
-  column-rule-width: 1px;
-  padding: 100px 50px;
-  color : #000000;
-
+article > * {
+  min-width: 0;
 }
-article h1{
+
+article > h1 {
+  font-family: Lucida Grande;
+  color: #000000;
+}
+
+article > p {    
+  --x-height-multiplier: 0.375;
+  --baseline-multiplier: 0.17;
+  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+  letter-spacing: .01rem;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+  color: rgba(0,0,0,.84);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+article > .aside {
+  font-family: Lucida Grande;
+  margin: 30px 20px;
+  color: #666;
+  font-size: 0.8em;
+}
+
+.line-numbers a {
+  text-decoration: none;
+  color: #000;
+  padding-right: 1em;
+}
+
+.bigpic {
+  postion:relative;
+  width: 100%;
+  height: 200px;
+  display: block;
+  background-image: linear-gradient(to right top, #590036, #59003e, #560047, #520051, #4b005b);
+	height: 80vh;
+	background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+}
+
+article h1 {
   column-span: all;
 }
 
-#wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.button {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #00c828;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-  float: left;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-.textbox{
-  border:2px solid;
-  padding:20px;
-  width:300px;
-  overflow: auto;
-  resize:both;
-}
-
-.tb2{
-  margin:20px;
-  padding:10px;
-  width:300px;
-  height:100px;
-  border:1px solid black;
-  outline: 1px solid red;
-  outline-offset: 10px;
-}
-.grid-container {
-  padding:150px 165px;
-  color:#000000;
-  font-family: 'Roboto';
-  font-weight: 100;
-}
 canvas {
   padding-left: 0;
   padding-right: 0;
@@ -98,12 +71,94 @@ canvas {
   width: 800px;
 }
 
-.active {
-  background: #d9d9d9;
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 10px 740px 10px 1fr 1fr;
+  padding: 100px 0px;
 }
 
-#my_Canvas {
-  background:#232323;
+article > * {
+  grid-column: 4;
+}
+
+article > .aside {
+  grid-column: 5 / -1;
+}
+
+.wrap {
+  padding:100px 0px;
+  display: block;
+  max-width: 300px;
+  margin: auto;
+}
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+
+  backface-visibility: hidden;
+  margin-bottom: 30px;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 7.4px;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+font-size: 14px;
+}
+
+article > blockquote {
+  grid-column: 3 / span 2;
+  margin: 0px 0;
+  color: #666;
+  border-left: 3px solid black;
+  padding-left: 10px;
+}
+
+.active {
+  background: #d9d9d9;
 }
 
 .header {
@@ -125,7 +180,7 @@ canvas {
 .header li a {
   display: block;
   padding: 20px 20px;
-  border-right: 1px solid #303030;
+  border-right: 1px solid #cccccc;
   color:#000000;
   text-decoration: none;
 }
@@ -145,6 +200,7 @@ p.date {
 p.main {
   text-align: justify;
 }
+
 .header .logo {
   display: block;
   float: left;
