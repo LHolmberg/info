@@ -67,7 +67,7 @@ function search(inp, arr) {
     currentFocus++;
 
     addActive(x);
-    } else if (e.keyCode == 38) { 
+    } else if (e.keyCode == 38) {
 
     currentFocus--;
 
@@ -113,5 +113,5 @@ function search(inp, arr) {
 }
 
 var stuff = ["Webbens historia", "GDPR", "LEK", "Webbens samhällspåverkan"];
-			
+
 search(document.getElementById("myInput"), stuff);
