@@ -7,13 +7,13 @@ function Submit()
       window.open("gdpr.html");
       break;
     case "webbens historia":
-      window.open("gdpr.html");
+      window.open("Web_hist.html");
       break;
     case "webbens samhällspåverkan":
-      window.open("gdpr.html");
+      window.open("Web_sam.html");
       break;
     case "lek":
-      window.open("gdpr.html");
+      window.open("lek.html");
       break;
     default:
       alert("There are no information about " + s);
